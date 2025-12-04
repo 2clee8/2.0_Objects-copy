@@ -38,14 +38,25 @@ public class Astronaut {
 
     //The move method.  Everytime this is run (or "called") the hero's x position and y position change by dx and dy
     public void move() {
-        if(xpos < 0){//bounce off the left wall
+        //bounce off the left wall
+        if(xpos < 0){
             dx = -dx;
         }
+
         //bounce off right wall
-        if (ypos < 0){//bounce off top wall
+        if(xpos > 945){
+            dx = -dx;
+        }
+
+        //bounce off top wall
+        if (ypos < 0){
             dy = -dy;
         }
+
         //bounce off bottom wall
+        if (ypos > 650){
+            dy = -dy;
+        }
 
         xpos = xpos + dx;
         ypos = ypos + dy;
