@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Asteroid {
 
 
@@ -10,7 +12,9 @@ public class Asteroid {
         public int dy;                    //the speed of the hero in the y direction
         public int width;
         public int height;
-        public boolean isAlive;            //a boolean to denote if the hero is alive or dead.
+        public boolean isAlive;//a boolean to denote if the hero is alive or dead.
+        public Rectangle hitbox;
+        public boolean isCrashing;
 
 
         // METHOD DEFINITION SECTION
@@ -29,7 +33,8 @@ public class Asteroid {
             width = 160;
             height = 160;
             isAlive = true;
-
+            hitbox = new Rectangle(xpos,ypos,width,height);
+            isCrashing = false;
 
 
         } // constructor
@@ -55,6 +60,7 @@ public class Asteroid {
 
             xpos = xpos + dx;
             ypos = ypos + dy;
+            hitbox = new Rectangle(xpos,ypos,width,height);
 
         }
 
