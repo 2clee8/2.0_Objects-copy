@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Asteroid {
+public class Starfish {
 
 
         //VARIABLE DECLARATION SECTION
@@ -25,7 +25,7 @@ public class Asteroid {
 
         //This is a SECOND constructor that takes 3 parameters.  This allows us to specify the hero's name and position when we build it.
         // if you put in a String, an int and an int the program will use this constructor instead of the one above.
-        public Asteroid(int pXpos, int pYpos) {
+        public Starfish(int pXpos, int pYpos) {
             xpos = pXpos;
             ypos = pYpos;
             dx =-5;

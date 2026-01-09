@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b2e628d-f533-4f04-bbce-7f121df6f9a6" name="Changes" comment="Initial commit">
+    <list default="true" id="2b2e628d-f533-4f04-bbce-7f121df6f9a6" name="Changes" comment="Changed characters and background">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asteroid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/astronaut.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2.0_Objects copy/Asteroid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2.0_Objects copy/BasicGameApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2.0_Objects copy/BasicGameApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/person.png" beforeDir="false" afterPath="$PROJECT_DIR$/person.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Asteroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Starfish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Astronaut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BasicGameApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicGameApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stars.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/starfish.png" beforeDir="false" afterPath="$PROJECT_DIR$/starfish.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +69,20 @@
       <option name="project" value="LOCAL" />
       <updated>1767807113049</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changed characters and background">
+      <option name="closed" value="true" />
+      <created>1767923998833</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1767923998833</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Changed characters and background" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed characters and background" />
   </component>
 </project>

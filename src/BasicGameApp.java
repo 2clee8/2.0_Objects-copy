@@ -38,18 +38,18 @@ public class BasicGameApp implements Runnable {
    public JPanel panel;
    
 	public BufferStrategy bufferStrategy;
-	public Image astroPic;
-    public Image asteroidPic;
+	public Image personPic;
+    public Image starfishPic;
     public Image backgroundPic;
 
 
     //Declare the objects used in the program
    //These are things that are made up of more than one variable type
-	private Astronaut astro;
+	private Person person1;
 //todo: make a new object called astro2
-    public Astronaut astro2;
-    public Asteroid asteroid1;
-    public Asteroid asteroid2;
+    public Person person2;
+    public Starfish starfish1;
+    public Starfish starfish2;
 
    // Main method definition
    // This is the code that runs first and automatically
@@ -86,32 +86,32 @@ public class BasicGameApp implements Runnable {
        
       //variable and objects
       //create (construct) the objects needed for the game and load up 
-		astroPic = Toolkit.getDefaultToolkit().getImage("person.png"); //load the picture
-        asteroidPic = Toolkit.getDefaultToolkit().getImage("starfish.png"); //load the picture
+		personPic = Toolkit.getDefaultToolkit().getImage("person.png"); //load the picture
+        starfishPic = Toolkit.getDefaultToolkit().getImage("starfish.png"); //load the picture
         backgroundPic = Toolkit.getDefaultToolkit().getImage("beach.png"); //load the picture
-		astro = new Astronaut(200,300);
-        astro.dx = -2;
-        astro.dy = 3;
+		person1 = new Person(200,300);
+        person1.dx = -2;
+        person1.dy = 3;
 
-        astro2 = new Astronaut(randx,randy);
-        astro2.dx = 3;
-        astro2.dy = -2;
-        astro2.height = 100;
-        astro2.width = 100;
+        person2 = new Person(randx,randy);
+        person2.dx = 3;
+        person2.dy = -2;
+        person2.height = 100;
+        person2.width = 100;
 
-        asteroid1 = new Asteroid(randx,400);
-//        asteroid1.dx = 3;
-//        asteroid1.dy = -2;
-        asteroid1.height = 100;
-        asteroid1.width = 100;
+        starfish1 = new Starfish(randx,400);
+//        starfish1.dx = 3;
+//        starfish1.dy = -2;
+        starfish1.height = 100;
+        starfish1.width = 100;
 
-        asteroid2 = new Asteroid(467,400);
-//        asteroid2.dx = 3;
-//        asteroid2.dy = -2;
-        asteroid2.height = 100;
-        asteroid2.width = 100;
+        starfish2 = new Starfish(467,400);
+//        starfish2.dx = 3;
+//        starfish2.dy = -2;
+        starfish2.height = 100;
+        starfish2.width = 100;
 
-        asteroid1.dx = -asteroid1.dx;
+        starfish1.dx = -starfish1.dx;
 	}// BasicGameApp()
 
    
@@ -137,33 +137,33 @@ public class BasicGameApp implements Runnable {
 	public void moveThings()
 	{
       //calls the move( ) code in the objects
-		astro.move();
-        astro2.move();
-        asteroid1.move();
-        asteroid2.move();
+		person1.move();
+        person2.move();
+        starfish1.move();
+        starfish2.move();
    Crashing();
 	}
 
     public void Crashing() {
         //if astros crash into each other
-        if (astro.hitBox.intersects(astro2.hitBox)) {
+        if (person1.hitBox.intersects(person2.hitBox)) {
             System.out.println("Crash!");
-            astro.dx = -astro.dx;
-            astro2.dx = -astro2.dx;
-            astro.dy = -astro.dy;
-            astro2.dy = -astro2.dy;
+            person1.dx = -person1.dx;
+            person2.dx = -person2.dx;
+            person1.dy = -person1.dy;
+            person2.dy = -person2.dy;
         }
 
-        if (asteroid1.hitbox.intersects(asteroid2.hitbox) && asteroid2.isCrashing == false) {
+        if (starfish1.hitbox.intersects(starfish2.hitbox) && starfish2.isCrashing == false) {
             ;
             System.out.println("Asteroid collision");
-            asteroid2.height = asteroid2.height + 10;
-            asteroid2.isCrashing = true;
+            starfish2.height = starfish2.height + 10;
+            starfish2.isCrashing = true;
 
         }
         // ! flips it (so it's saying is it false if they're intersecting instead of is it true
-        if (!asteroid1.hitbox.intersects(asteroid2.hitbox)) {
-            asteroid2.isCrashing = false;
+        if (!starfish1.hitbox.intersects(starfish2.hitbox)) {
+            starfish2.isCrashing = false;
         }
     }
    //Pauses or sleeps the computer for the amount specified in milliseconds
@@ -215,15 +215,15 @@ public class BasicGameApp implements Runnable {
         g.drawImage(backgroundPic, 0, 0, WIDTH, HEIGHT, null);
 
       //draw the image of the astronaut
-		g.drawImage(astroPic, astro.xpos, astro.ypos, astro.width, astro.height, null);
+		g.drawImage(personPic, person1.xpos, person1.ypos, person1.width, person1.height, null);
 
-        if(astro2.isAlive == true){
-            g.drawImage(astroPic, astro2.xpos, astro2.ypos, astro2.width, astro2.height, null);
+        if(person2.isAlive == true){
+            g.drawImage(personPic, person2.xpos, person2.ypos, person2.width, person2.height, null);
         }
-        g.drawImage(asteroidPic, asteroid1.xpos, asteroid1.ypos, asteroid1.width, asteroid1.height, null);
-        g.drawImage(asteroidPic, asteroid2.xpos, asteroid2.ypos, asteroid2.width, asteroid2.height, null);
-        g.drawRect(astro.hitBox.x,astro.hitBox.y,astro.hitBox.width,astro.hitBox.height);
-        g.drawRect(astro2.hitBox.x,astro2.hitBox.y,astro2.hitBox.width,astro2.hitBox.height);
+        g.drawImage(starfishPic, starfish1.xpos, starfish1.ypos, starfish1.width, starfish1.height, null);
+        g.drawImage(starfishPic, starfish2.xpos, starfish2.ypos, starfish2.width, starfish2.height, null);
+        g.drawRect(person1.hitBox.x,person1.hitBox.y,person1.hitBox.width,person1.hitBox.height);
+        g.drawRect(person2.hitBox.x,person2.hitBox.y,person2.hitBox.width,person2.hitBox.height);
 
 
         g.dispose();
