@@ -41,6 +41,8 @@ public class BasicGameApp implements Runnable {
 	public Image personPic;
     public Image starfishPic;
     public Image backgroundPic;
+    public Image yachtPic;
+    public Image seagullPic;
 
 
     //Declare the objects used in the program
@@ -50,6 +52,8 @@ public class BasicGameApp implements Runnable {
     public Person person2;
     public Starfish starfish1;
     public Starfish starfish2;
+    public Yacht yacht;
+    public Seagull seagull;
 
    // Main method definition
    // This is the code that runs first and automatically
@@ -88,7 +92,10 @@ public class BasicGameApp implements Runnable {
       //create (construct) the objects needed for the game and load up 
 		personPic = Toolkit.getDefaultToolkit().getImage("person.png"); //load the picture
         starfishPic = Toolkit.getDefaultToolkit().getImage("starfish.png"); //load the picture
+        yachtPic = Toolkit.getDefaultToolkit().getImage("yacht.png");
         backgroundPic = Toolkit.getDefaultToolkit().getImage("beach.png"); //load the picture
+        seagullPic = Toolkit.getDefaultToolkit().getImage("seagull.png");
+
 		person1 = new Person(200,300);
         person1.dx = -2;
         person1.dy = 3;
@@ -112,6 +119,15 @@ public class BasicGameApp implements Runnable {
         starfish2.width = 100;
 
         starfish1.dx = -starfish1.dx;
+
+        yacht = new Yacht(300,310);
+        yacht.height = 100;
+        yacht.width = 100;
+
+        seagull = new Seagull(300,320);
+        seagull.height = 50;
+        seagull.width = 50;
+
 	}// BasicGameApp()
 
    
@@ -141,11 +157,13 @@ public class BasicGameApp implements Runnable {
         person2.move();
         starfish1.move();
         starfish2.move();
+        yacht.move();
+        seagull.move();
    Crashing();
 	}
 
     public void Crashing() {
-        //if astros crash into each other
+        //if starfish or Person crash into each other:
         if (person1.hitBox.intersects(person2.hitBox)) {
             System.out.println("Crash!");
             person1.dx = -person1.dx;
@@ -161,9 +179,25 @@ public class BasicGameApp implements Runnable {
             starfish2.isCrashing = true;
 
         }
+        // "!" flips it (so it's saying is it false if they're intersecting instead of is it true
+        if (!seagull.hitbox.intersects(yacht.hitbox)) {
+            yacht.isCrashing = false;
+        }
+
+        //if yacht and seagull crash into each other (make seagull larger):
+
+        if (seagull.hitbox.intersects(yacht.hitbox) && yacht.isCrashing == false) {
+            ;
+            System.out.println("Seagull and yacht collision");
+            seagull.height = seagull.height + 10 ;
+            seagull.width = seagull.width + 10;
+            yacht.isCrashing = true;
+
+        }
+
         // ! flips it (so it's saying is it false if they're intersecting instead of is it true
-        if (!starfish1.hitbox.intersects(starfish2.hitbox)) {
-            starfish2.isCrashing = false;
+        if (!seagull.hitbox.intersects(yacht.hitbox)) {
+            yacht.isCrashing = false;
         }
     }
    //Pauses or sleeps the computer for the amount specified in milliseconds
@@ -222,8 +256,10 @@ public class BasicGameApp implements Runnable {
         }
         g.drawImage(starfishPic, starfish1.xpos, starfish1.ypos, starfish1.width, starfish1.height, null);
         g.drawImage(starfishPic, starfish2.xpos, starfish2.ypos, starfish2.width, starfish2.height, null);
-        g.drawRect(person1.hitBox.x,person1.hitBox.y,person1.hitBox.width,person1.hitBox.height);
-        g.drawRect(person2.hitBox.x,person2.hitBox.y,person2.hitBox.width,person2.hitBox.height);
+        g.drawImage(yachtPic, yacht.xpos, yacht.ypos, yacht.width, yacht.height, null);
+        g.drawImage(seagullPic, seagull.xpos, seagull.ypos, seagull.width, seagull.height, null);
+        //g.drawRect(person1.hitBox.x,person1.hitBox.y,person1.hitBox.width,person1.hitBox.height);
+        //g.drawRect(person2.hitBox.x,person2.hitBox.y,person2.hitBox.width,person2.hitBox.height);
 
 
         g.dispose();
