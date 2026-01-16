@@ -193,12 +193,14 @@ public class BasicGameApp implements Runnable {
             seagull.width = seagull.width + 10;
             yacht.isCrashing = true;
 
+
         }
 
         // ! flips it (so it's saying is it false if they're intersecting instead of is it true
         if (!seagull.hitbox.intersects(yacht.hitbox)) {
             yacht.isCrashing = false;
         }
+
     }
    //Pauses or sleeps the computer for the amount specified in milliseconds
      public void pause(int time){

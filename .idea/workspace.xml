@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b2e628d-f533-4f04-bbce-7f121df6f9a6" name="Changes" comment="Changed characters and background">
+    <list default="true" id="2b2e628d-f533-4f04-bbce-7f121df6f9a6" name="Changes" comment="Made seagull and yacht and collision makes seagull larger (both width and height). Changed background.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beach.png" beforeDir="false" afterPath="$PROJECT_DIR$/beach.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BasicGameApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicGameApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,12 +90,21 @@
       <option name="project" value="LOCAL" />
       <updated>1767966001783</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Made seagull and yacht and collision makes seagull larger (both width and height). Changed background.">
+      <option name="closed" value="true" />
+      <created>1768399487959</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1768399487959</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Changed characters and background" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed characters and background" />
+    <MESSAGE value="Made seagull and yacht and collision makes seagull larger (both width and height). Changed background." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made seagull and yacht and collision makes seagull larger (both width and height). Changed background." />
   </component>
 </project>
