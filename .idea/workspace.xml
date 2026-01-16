@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2b2e628d-f533-4f04-bbce-7f121df6f9a6" name="Changes" comment="Made seagull and yacht and collision makes seagull larger (both width and height). Changed background.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2.0_Objects copy/BasicGameApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2.0_Objects copy/BasicGameApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BasicGameApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicGameApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768399487959</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Made seagull and yacht and collision makes seagull larger (both width and height). Changed background.">
+      <option name="closed" value="true" />
+      <created>1768526527748</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1768526527748</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

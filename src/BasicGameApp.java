@@ -35,7 +35,7 @@ public class BasicGameApp implements Runnable {
    //Declare the variables needed for the graphics
 	public JFrame frame;
 	public Canvas canvas;
-   public JPanel panel;
+    public JPanel panel;
    
 	public BufferStrategy bufferStrategy;
 	public Image personPic;
